@@ -6,7 +6,7 @@
 ## 安装
 
 ```
-npm i fly-engine --save
+npm i engine --save
 ```
 
 ## 使用
@@ -15,14 +15,14 @@ npm i fly-engine --save
 
 ```js
 const path = require('path');
-const override = require('fly-engine/override');
+const override = require('engine/override');
 
 ( async ( ) => {
     await override(
         // 项目 node_modules 的绝对路径
         path.resolve( __dirname, './node_modules' ),
         // 项目 node_modules_override 的绝对路径
-        path.resolve( __dirname, './node_modules/fly-engine/node_modules_override' ),
+        path.resolve( __dirname, './node_modules/engine/node_modules_override' ),
         // 是否 debug 模式
         true,
     )
@@ -35,7 +35,7 @@ const override = require('fly-engine/override');
 // messager 工作流消息输出机制
 // dev 启动 开发 的异步函数
 // build 启动 构建 的异步函数
-const { messager, dev, build } = require('fly-engine');
+const { messager, dev, build } = require('engine');
 
 dev( Config );
 ```
